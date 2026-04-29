@@ -1,0 +1,41 @@
+{
+  "name": "opencode-discord-presence",
+  "version": "0.1.0",
+  "description": "Discord Rich Presence plugin for OpenCode — shows agent, model, tokens, and cost on your Discord profile",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "opencode",
+    "opencode-ai",
+    "discord",
+    "rich-presence",
+    "rpc",
+    "plugin"
+  ],
+  "license": "MIT",
+  "author": "Tuguldur Chinzorig",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tugzrid/opencode-discord-presence"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@xhayper/discord-rpc": "^1.2.1"
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "^1.14.29",
+    "@opencode-ai/sdk": "^1.14.29",
+    "typescript": "^5.7.0",
+    "@types/bun": "^1.2.0"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": ">=1.14.29",
+    "@opencode-ai/sdk": ">=1.14.29"
+  }
+}
