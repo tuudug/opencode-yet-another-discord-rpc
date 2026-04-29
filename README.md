@@ -1,4 +1,4 @@
-# OpenCode Discord Rich Presence
+# OpenCode Yet Another Discord RPC
 
 Discord Rich Presence plugin for [OpenCode](https://github.com/opencode-ai/opencode). Shows your current agent, model, token usage, and cost directly on your Discord profile.
 
@@ -31,13 +31,13 @@ The presence updates in real time as you work — switching agents, models, and 
 
 ```bash
 # Using bun
-bun add opencode-discord-presence
+bun add opencode-yet-another-discord-rpc
 
 # Using npm
-npm install opencode-discord-presence
+npm install opencode-yet-another-discord-rpc
 
 # Using pnpm
-pnpm add opencode-discord-presence
+pnpm add opencode-yet-another-discord-rpc
 ```
 
 ## Quick Start
@@ -46,7 +46,7 @@ Add the plugin to your `opencode.json` config:
 
 ```json
 {
-  "plugins": ["opencode-discord-presence"]
+  "plugins": ["opencode-yet-another-discord-rpc"]
 }
 ```
 
@@ -63,7 +63,7 @@ The plugin works out of the box with a default Discord application ID. To use yo
 ```json
 {
   "plugins": [
-    ["opencode-discord-presence", { "clientId": "YOUR_APP_ID" }]
+    ["opencode-yet-another-discord-rpc", { "clientId": "YOUR_APP_ID" }]
   ]
 }
 ```
