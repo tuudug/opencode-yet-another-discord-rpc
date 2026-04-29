@@ -31,8 +31,14 @@ export function capitalize(s: string): string {
 }
 
 export function compactNumber(n: number): string {
-  if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`
-  if (n >= 1_000) return `${(n / 1_000).toFixed(1)}k`
+  if (n >= 1_000_000) {
+    const m = n / 1_000_000
+    return `${m % 1 === 0 ? m.toFixed(0) : m.toFixed(1)}M`
+  }
+  if (n >= 1_000) {
+    const k = n / 1_000
+    return `${k % 1 === 0 ? k.toFixed(0) : k.toFixed(1)}k`
+  }
   return String(n)
 }
 
@@ -62,7 +68,7 @@ export function formatPresence(state: PresenceState): DiscordActivity {
   if (state.inputTokens > 0 || state.outputTokens > 0 || state.cost > 0) {
     const usageParts: string[] = []
     if (state.inputTokens > 0 || state.outputTokens > 0) {
-      usageParts.push(`${compactNumber(state.inputTokens)} in / ${compactNumber(state.outputTokens)} out`)
+      usageParts.push(`↑${compactNumber(state.inputTokens)} ↓${compactNumber(state.outputTokens)}`)
     }
     if (state.cost > 0) {
       usageParts.push(`$${state.cost.toFixed(4)}`)
