@@ -1,6 +1,6 @@
 {
   "name": "opencode-yet-another-discord-rpc",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Discord Rich Presence plugin for OpenCode — shows agent, model, tokens, and cost on your Discord profile",
   "type": "module",
   "main": "src/index.ts",
@@ -17,10 +17,10 @@
     "plugin"
   ],
   "license": "MIT",
-  "author": "Tuguldur Chinzorig",
+  "author": "tuudug",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tugzrid/opencode-discord-presence"
+    "url": "https://github.com/tuudug/opencode-yet-another-discord-rpc"
   },
   "scripts": {
     "typecheck": "tsc --noEmit"
